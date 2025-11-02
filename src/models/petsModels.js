@@ -37,7 +37,7 @@ export const updatePet = async (id, data) => {
 };
 
 export const deletePet = async (id) => {
-  return await prisma.pet.findUnique({
+  return await prisma.pet.delete({
     where: { id: Number(id) },
   });
 };
